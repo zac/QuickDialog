@@ -17,7 +17,6 @@
 #import "QDynamicDataSection.h"
 #import "PeriodPickerValueParser.h"
 #import "QMapElement.h"
-#import "QWebElement.h"
 #import "QMailElement.h"
 #import "QPickerElement.h"
 
@@ -43,8 +42,7 @@
 	[subsection	addElement:[[QRadioElement alloc] init]];
 	[subsection	addElement:[[QRadioItemElement alloc] init]];
 	[subsection	addElement:[[QTextElement alloc] init]];
-	[subsection	addElement:[[QWebElement alloc] init]];
-	
+
 	return subForm;
 }
 
@@ -69,8 +67,7 @@
 	[subsection	addElement:[[QRadioElement alloc] initWithKey:@"Key1"]];
 	[subsection	addElement:[[QRadioItemElement alloc] initWithKey:@"Key1"]];
 	[subsection	addElement:[[QTextElement alloc] initWithKey:@"Key1"]];
-	[subsection	addElement:[[QWebElement alloc] initWithKey:@"Key1"]];
-	
+
 	return subForm;
 }
 
@@ -392,9 +389,6 @@
     root.controllerName = @"ExampleViewController";
     root.title = @"Web and map";
 
-    QWebElement *element1 = [[QWebElement alloc] initWithTitle:@"ESCOZ Inc" url:@"http://escoz.com"];
-    element1.controllerAction = @"handleWebElementControllerAction:";
-    QWebElement *element2 = [[QWebElement alloc] initWithTitle:@"Quicklytics" url:@"http://escoz.com/quicklytics"];
     QMapElement *element4 = [[QMapElement alloc] initWithTitle:@"Florianopolis, Brazil" coordinate:CLLocationCoordinate2DMake(-27.59, -48.55)];
 
     QSection *section1 = [[QSection alloc] init];
